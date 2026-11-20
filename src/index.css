@@ -1,0 +1,54 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0a0a; /* deep black/navy */
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
+/* Utility classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #9b5de5, #00b4d8, #00f5d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Scroll progress bar */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #00b4d8;
+  z-index: 9999;
+}
